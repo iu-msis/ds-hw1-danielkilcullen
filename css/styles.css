@@ -1,0 +1,51 @@
+#nav {
+  background-color: #d6d6d6;
+  height: 50px;
+}
+
+.heading {
+  margin-left:20px;
+}
+
+.h1 {
+  margin-top: 20px;
+}
+
+#bio {
+  height:500px;
+  margin-top: 0px;
+
+  background-image: url(../images/Me.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#bio-text {
+  height: auto;
+  padding: 10px;
+  background: rgba(255,255,255,0.6);
+
+}
+
+#email {
+  height: 500px;
+
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.img-row {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.trav {
+  height: inherit;
+  width: inherit;
+  margin-top: auto;
+  vertical-align: center;
+}
