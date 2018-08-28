@@ -3,6 +3,10 @@
   height: 50px;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .heading {
   margin-left:20px;
 }
@@ -44,6 +48,13 @@
 }
 
 .trav {
+  height: inherit;
+  width: inherit;
+  /* margin-top: auto;
+  vertical-align: center; */
+}
+
+.sports {
   height: inherit;
   width: inherit;
   margin-top: auto;
