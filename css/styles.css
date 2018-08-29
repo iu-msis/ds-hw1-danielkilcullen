@@ -15,6 +15,7 @@ a:hover {
   margin-top: 20px;
 }
 
+
 #bio {
   height:500px;
   margin-top: 0px;
@@ -59,4 +60,23 @@ a:hover {
   width: inherit;
   margin-top: auto;
   vertical-align: center;
+}
+
+#AL {
+  margin: 30px;
+}
+
+#AL, #NL {
+  width:70%;
+}
+
+#sports-tables {
+  background-color: #d6d6d6;
+  padding-top:30px;
+  padding-bottom: 30px;
+}
+
+#sports-form {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }

@@ -13,13 +13,10 @@
 	<div class="col-4 offset-2 my-auto">
 		<ul class="nav navbar-right">
 			<li class="nav-item">
-				<a class="nav-link text-dark" href="#">Travel</a>
+				<a class="nav-link text-dark" href="travel.html">Travel</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link text-dark" href="#">Music</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link text-dark" href="#">Sports</a>
+				<a class="nav-link text-dark" href="sports.html">Sports</a>
 			</li>
 		</ul>
 	</div>
@@ -27,8 +24,9 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-6"><img src="../images/Yankee_Stadium.jpg" class="sports" /></div>
-    <div class="col-4 offset-1">
+    <div class="col-6 my-auto"><img src="../images/Yankee_Stadium.jpg" class="sports" /></div>
+    <div class="col-4 offset-1 my-auto">
+			<p class="h3">MLB Postseason Approaching</p>
       <p>As I mentioned, I'm a huge Yankee fan. With the
       regular season winding down, the postseason picture
       is starting to look clearer. Below are my predictions
@@ -38,5 +36,121 @@
     </div>
   </div>
 </div>
-
-<div id="nav"></div>
+<div id="sports-tables">
+		<div class="mx-auto" id="AL">
+			<h3 class="text-center">American League</h3>
+			<table class="table table-striped text-center">
+				<thead class="thead-dark">
+					<tr>
+						<th>Team</th>
+						<th>Division</th>
+						<th># of wins</th>
+						<th>How much I'd feel confident betting</th>
+					</tr>
+				</thead>
+				<tr>
+					<td>New York Yankees</td>
+					<td>AL East</td>
+					<td>104</td>
+					<td>$10</td>
+				</tr>
+				<tr>
+					<td>Cleveland Indians</td>
+					<td>AL Central</td>
+					<td>93</td>
+					<td>$9</td>
+				</tr>
+				<tr>
+					<td>Houston Astros</td>
+					<td>AL West</td>
+					<td>97</td>
+					<td>$7</td>
+				</tr>
+				<tr>
+					<td>Boston Red Sox</td>
+					<td>AL Wild Card</td>
+					<td>103</td>
+					<td>$10</td>
+				</tr>
+				<tr>
+					<td>Oakland Athletics</td>
+					<td>AL Wild Card</td>
+					<td>96</td>
+					<td>$5</td>
+				</tr>
+			</table>
+		</div>
+		<div class="mx-auto" id="NL">
+			<h3 class="text-center">National League</h3>
+			<table class="table table-striped text-center">
+				<thead class="thead-dark">
+					<tr>
+						<th>Team</th>
+						<th>Division</th>
+						<th># of wins</th>
+						<th>How much I'd feel confident betting</th>
+					</tr>
+				</thead>
+				<tr>
+					<td>Atlanta Braves</td>
+					<td>NL East</td>
+					<td>98</td>
+					<td>$10</td>
+				</tr>
+				<tr>
+					<td>Chicago Cubs</td>
+					<td>NL Central</td>
+					<td>96</td>
+					<td>$9</td>
+				</tr>
+				<tr>
+					<td>Arizona Diamondbacks</td>
+					<td>NL West</td>
+					<td>98</td>
+					<td>$7</td>
+				</tr>
+				<tr>
+					<td>Los Angeles Dodgers</td>
+					<td>NL Wild Card</td>
+					<td>91</td>
+					<td>$10</td>
+				</tr>
+				<tr>
+					<td>Milwaukee Brewers</td>
+					<td>NL Wild Card</td>
+					<td>93</td>
+					<td>$5</td>
+				</tr>
+			</table>
+	</div>
+</div>
+<div class="row" id="sports-form">
+	<div class="col-6 offset-3">
+		<h2 class="text-center">How will the regular season playout?</h2>
+		<form>
+			<div class="form-group">
+				<div class="form-group">
+					<label for="InputEmail">Your name *</label>
+					<input type="email" class="form-control" id="InputEmail"/>
+				</div>
+				<label for="VenueName">Team *</label>
+				<input type="text" class="form-control" id="VenueName"/>
+			</div>
+			<div class="form-group">
+				<label for="InputEmail">Division *</label>
+				<input type="email" class="form-control" id="InputEmail"/>
+			</div>
+			<div class="form-group">
+				<label for="InputEmail"># of wins *</label>
+				<input type="email" class="form-control" id="InputEmail"/>
+			</div>
+			<div class="form-group">
+				<label for="InputEmail">Your bet *</label>
+				<input type="email" class="form-control" id="InputEmail"/>
+			</div>
+			<div class="text-center">
+				<button type="button" class="btn">Post</button>
+			</div>
+		</form>
+	</div>
+</div>
