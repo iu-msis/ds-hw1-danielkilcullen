@@ -62,11 +62,11 @@ a:hover {
   vertical-align: center;
 }
 
-#AL {
+#AL-Container {
   margin: 30px;
 }
 
-#AL, #NL {
+#AL-Container, #NL-Container {
   width:70%;
 }
 
