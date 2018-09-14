@@ -33,7 +33,7 @@
 					<p><strong>Birthday: </strong>{{pretty_Date(user.birthday)}}</p>
 					<p><strong>Age: </strong>{{calculateAge(user.birthday)}}</p>
 					<p><strong>Address: </strong>{{user.address}}</p>
-					<p><strong>Email: </strong><a v-bind:href="'mailto:'+user.email">{{user.email}}</a></p>
+					<p><strong>Email address: </strong><a v-bind:href="'mailto:'+user.email">{{user.email}}</a></p>
 					<div class="text-center">
 						<button class="btn-dark" v-on:click="fetchUser()">Random user</button>
 					</div>
