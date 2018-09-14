@@ -23,9 +23,8 @@
 				</ul>
 			</div>
 		</div>
-		<div class="container-fluid" id="content">
+		<div class="container-fluid">
 			<div class="row my-auto mx-auto">
-
 				<div class="my-auto text-center mx-auto" id="bio-text">
 					<div>
 						<img class="img-fluid" v-bind:src="user.picture" alt="random user" id="user-img"/>
@@ -36,7 +35,7 @@
 					<p><strong>Address: </strong>{{user.address}}</p>
 					<p><strong>Email: </strong><a v-bind:href="'mailto:'+user.email">{{user.email}}</a></p>
 					<div class="text-center">
-						<button class="btn-dark" v-on:click="fetchUser()">Random User</button>
+						<button class="btn-dark" v-on:click="fetchUser()">Random user</button>
 					</div>
 				</div>
 			</div>
@@ -58,7 +57,7 @@
 							<label for="Message">Your message *</label>
 							<textarea rows="5" class="form-control"></textarea>
 						</div>
-						<div>
+						<div class="text-center">
 							<button type="button" class="btn-dark">Send message</button>
 						</div>
 					</form>

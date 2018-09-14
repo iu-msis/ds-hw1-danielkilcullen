@@ -15,7 +15,6 @@ a:hover {
   margin-top: 20px;
 }
 
-
 #content {
   /* height:500px;
   margin-top: 0px;
@@ -25,7 +24,6 @@ a:hover {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover; */
-  background-color: white;
 }
 
 #user-img {
