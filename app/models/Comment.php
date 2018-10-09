@@ -5,8 +5,10 @@ class Comment {
   public $comment;
 
   public function __construct($row){
-    $this->id = isset($row['id']) ? intval($row['id']) : null;
-    $this->comment = isset($row['comment']) ? $row['comment'] : "error";
+    // $this->id = isset($row['id']) ? intval($row['id']) : null;
+    // $this->comment = isset($row['comment']) ? $row['comment'] : "error";
+    $this->id = intval($row['id']);
+    $this->comment = $row['comment'];
   }
 
   public function create() {
