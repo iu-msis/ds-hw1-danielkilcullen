@@ -4,14 +4,28 @@ class Comment {
   public $id;
   public $comment;
 
-  public function __construct($data){
-    $this->id = intval($data['id']);
-    $this->comment = $data['name'];
+  public function __construct($row){
+    $this->id = isset($row['id']) ? intval($row['id']) : null;
+    $this->comment = $row['name'];
+  }
+
+  public function create() {
+    $db = new PDO(DB_SERVER,DB_USER,DB_PW);
+
+    $sql = 'INSERT INTO Comments (id,comment)
+    VALUES(?, ?)';
+
+    $statement = $db->prepare($sql);
+
+    $success = $statement->execute([
+      $this->id,
+      $this->comment
+    ]);
+    $this->id = $db->lastInsertId();
   }
 
   public static function fetchAll(){
-    $db = new PDO(DB_SERVER,DB_USER,DB_PW)
-    $db->lastInsertId();
+    $db = new PDO(DB_SERVER,DB_USER,DB_PW);
 
     $sql = 'SELECT * FROM Comments';
     $statement = $db->prepare($sql);
