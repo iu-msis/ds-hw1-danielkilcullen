@@ -11,6 +11,7 @@ class Comment {
 
   public static function fetchAll(){
     $db = new PDO(DB_SERVER,DB_USER,DB_PW)
+    $db->lastInsertId();
 
     $sql = 'SELECT * FROM Comments';
     $statement = $db->prepare($sql);
@@ -24,5 +25,5 @@ class Comment {
     }
     .return $arr;
   }
-  
+
 }
