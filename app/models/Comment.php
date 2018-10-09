@@ -37,7 +37,7 @@ class Comment {
       $theComment = new Comment($row);
       array_push($arr,$theComment);
     }
-    .return $arr;
+    return $arr;
   }
 
 }
