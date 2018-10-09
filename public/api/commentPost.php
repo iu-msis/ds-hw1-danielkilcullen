@@ -1,6 +1,6 @@
 <?php
 
-$comment = new Comment($_POST);
+$comment = new Comment($_POST['comment']);
 
 $comment->create();
 
