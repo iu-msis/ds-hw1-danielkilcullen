@@ -1,6 +1,7 @@
 <?php
 
 require '../../app/common.php';
+require '../../app/models/Comment.php'
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   require 'commentPost.php';
