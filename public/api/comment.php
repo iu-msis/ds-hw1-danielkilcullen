@@ -5,6 +5,9 @@ require '../../app/models/Comment.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   require 'commentPost.php';
+  $comment = new Comment($_POST);
+  $comment->create();
+  echo json_encode($comment);
   exit;
 }
 

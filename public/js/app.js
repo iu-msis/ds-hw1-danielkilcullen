@@ -37,6 +37,6 @@ var bioPage = new Vue({
     }
   },
   created() {
-    this.fetchUser()
+    this.fetchUser();
   }
-})
+});
