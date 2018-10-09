@@ -18,7 +18,7 @@ class Comment {
     $statement = $db->prepare($sql);
 
     $success = $statement->execute([
-      $this->id,
+      // $this->id,
       $this->comment
     ]);
     $this->id = $db->lastInsertId();
