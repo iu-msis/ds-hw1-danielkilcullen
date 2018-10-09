@@ -1,7 +1,6 @@
 <?php
 
 require '../../app/common.php';
-require '../../app/models/Comment.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   require 'commentPost.php';
@@ -17,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //   throw new Exception('Invalid ID');
 // }
 
+$commentArr = [];
 $commentArr = Comment::fetchAll();
 
 $json = json_encode($commentArr, JSON_PRETTY_PRINT);
