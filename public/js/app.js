@@ -39,6 +39,10 @@ var bioPage = new Vue({
         bioPage.comment.id = json.results[0].id;
         bioPage.comment.text = json.results[0].comment;
       })
+      .catch( err => {
+        console.log('COMMENT FETCH ERROR: ')
+        console.log(err);
+      })
     },
     pretty_Date(d) {
       //do_magic
