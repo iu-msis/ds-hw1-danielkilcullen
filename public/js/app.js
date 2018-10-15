@@ -8,6 +8,10 @@ var bioPage = new Vue({
       address: '',
       email: '',
       picture: ''
+    },
+    comments: {
+      id: '',
+      comment: ''
     }
   }, /**js object**/
   methods: {
@@ -28,6 +32,20 @@ var bioPage = new Vue({
         console.log(err);
       });
     },
+    fetchComments() {
+      fetch('../api/comment.php')
+      .then( response => response.json() )
+      .then( json => {
+        bioPage.comments.id = json.results[1].id;
+        bioPage.comments.comment = json.results[1].comment;
+        console.log('COMMENT FETCH returned: ');
+        console.log(json);
+      })
+      .catch( err => {
+        console.log("COMMENT FETCH error: ");
+        console.log(err);
+      });
+    },
     pretty_Date(d) {
       //do_magic
       return moment(d).format('l');
@@ -38,32 +56,6 @@ var bioPage = new Vue({
   },
   created() {
     this.fetchUser();
-  }
-});
-
-var commentsApp = new Vue({
-  el: '#commentTable',
-  data: {
-    id: '',
-    comment: ''
-  },
-  methods: {
-    fetchComments() {
-      fetch('../api/comment.php')
-      .then( response => response.json() )
-      .then( json => {
-        commentsApp.id = json.results[0].id;
-        commentsApp.comment = json.results[0].comment;
-        console.log('COMMENT FETCH returned: ');
-        console.log(json);
-      })
-      .catch( err => {
-        console.log("COMMENT FETCH error: ");
-        console.log(err);
-      });
-    }
-  },
-  created() {
     this.fetchComments();
   }
-})
+});
