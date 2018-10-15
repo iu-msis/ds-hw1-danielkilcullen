@@ -25,7 +25,7 @@
 		</div>
 		<div class="container-fluid">
 			<div class="row my-auto mx-auto">
-				<div class="my-auto text-center mx-auto" id="bio-text">
+				<div class="my-auto text-center col-6" id="bio-text">
 					<div>
 						<img class="img-fluid" v-bind:src="user.picture" alt="random user" id="user-img"/>
 					</div>
@@ -37,6 +37,23 @@
 					<div class="text-center">
 						<button class="btn-dark" v-on:click="fetchUser()">Random user</button>
 					</div>
+				</div>
+				<div class="col-6">
+					<table class="table" id="commentTable">
+						<thead>
+							<th>Comment ID</th>
+							<th>Comment</th>
+						</thead>
+						<tbody id="commentTableBody">
+							<tr v-for="comment in comments"
+								:key="comment.id"
+								:id="'comment-' + id"
+								:class="">
+								<td>{{ comment.id }}</td>
+								<td>{{ comment.text }}</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>

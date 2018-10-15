@@ -8,6 +8,10 @@ var bioPage = new Vue({
       address: '',
       email: '',
       picture: ''
+    },
+    comment: {
+      id: '',
+      text: ''
     }
   }, /**js object**/
   methods: {
@@ -27,6 +31,14 @@ var bioPage = new Vue({
         console.log('PROJECT FETCH error: ');
         console.log(err);
       });
+    },
+    fetchComments() {
+      fetch('../api/comment.php')
+      .then( response => response.json() )
+      .then( json => {
+        bioPage.comment.id = json.results[0].id;
+        bioPage.comment.text = json.results[0].comment;
+      })
     },
     pretty_Date(d) {
       //do_magic
