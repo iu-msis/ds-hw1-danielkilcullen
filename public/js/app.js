@@ -36,8 +36,8 @@ var bioPage = new Vue({
       fetch('../api/comment.php')
       .then( response => response.json() )
       .then( json => {
-        bioPage.comments.id = json.results[1].id;
-        bioPage.comments.comment = json.results[1].comment;
+        bioPage.comments.id = json.results[0].id;
+        bioPage.comments.comment = json.results[0].comment;
         console.log('COMMENT FETCH returned: ');
         console.log(json);
       })
