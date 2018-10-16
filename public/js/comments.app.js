@@ -1,4 +1,4 @@
-var commentsApp = new Vue({
+var HW7 = new Vue({
   el: '#commentTableBody',
   data: {
     comments: {
