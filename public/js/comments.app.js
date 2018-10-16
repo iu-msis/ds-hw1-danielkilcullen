@@ -16,7 +16,7 @@ var commentsApp = new Vue({
         console.log('COMMENT FETCH returned: ');
         console.log(json);
       })
-      .then( json => commentsApp.comments = json)
+      .then( commentsApp.comments = json )
       .catch( err => {
         console.log("COMMENT FETCH error: ");
         console.log(err);
