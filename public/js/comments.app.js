@@ -1,7 +1,7 @@
 var commentsApp = new Vue({
-  el: '#commentTable',
+  el: '#commentTableBody',
   data: {
-    comments: { id: '', comment: '' }
+    comments: [{ id: '', comment: '' }]
   }, /**js object**/
   methods: {
     fetchComments: function() {
