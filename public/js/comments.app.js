@@ -13,7 +13,7 @@ var commentsApp = new Vue({
       fetch('../api/comment.php')
       .then( response => response.json() )
       .then( json => {this.commentArr = json})
-      .then(console.log(this.commentArr)) //testing
+      .then(console.log(json)) //testing
       .catch( err => {
         console.log("COMMENT FETCH error: ");
         console.log(err);
