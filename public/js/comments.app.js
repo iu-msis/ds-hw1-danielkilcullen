@@ -10,7 +10,7 @@ var commentsApp = new Vue({
   }, /**js object**/
   methods: {
     fetchComments: function() {
-      fetch('ec2-18-219-100-144.us-east-2.compute.amazonaws.com/api/comment.php')
+      fetch('../api/comment.php')
       .then( response => response.json() )
       .then( json => { commentsApp.comments = json } )
       .then( json => {
