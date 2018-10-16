@@ -32,20 +32,6 @@ var bioPage = new Vue({
         console.log(err);
       });
     },
-    fetchComments() {
-      fetch('../api/comment.php')
-      .then( response => response.json() )
-      .then( json => {
-        bioPage.comments.id = json.results[0].id;
-        bioPage.comments.comment = json.results[0].comment;
-        console.log('COMMENT FETCH returned: ');
-        console.log(json);
-      })
-      .catch( err => {
-        console.log("COMMENT FETCH error: ");
-        console.log(err);
-      });
-    },
     pretty_Date(d) {
       //do_magic
       return moment(d).format('l');
@@ -56,6 +42,5 @@ var bioPage = new Vue({
   },
   created() {
     this.fetchUser();
-    this.fetchComments();
   }
 });
