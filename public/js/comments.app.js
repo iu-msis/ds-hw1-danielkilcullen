@@ -6,7 +6,7 @@ var commentsApp = new Vue({
         comment : ""
     },
     commentArr: [],
-    commentForm: {}
+    commentForm: {},
   },
   methods: {
     fetchComments: function() {

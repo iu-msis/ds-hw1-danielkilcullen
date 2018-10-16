@@ -44,11 +44,9 @@
 							<th>Comment ID</th>
 							<th>Comment</th>
 						</thead>
-						<tbody id="commentTableBody">
-							<tr v-for="comment in commentArr">
-								<td>{{ comment.id }}</td>
-								<td>{{ comment.text }}</td>
-							</tr>
+						<tbody v-for="comment in commentArr" id="commentTableBody">
+							<td>{{ comment.id }}</td>
+							<td>{{ comment.text }}</td>
 						</tbody>
 					</table>
 				</div>
