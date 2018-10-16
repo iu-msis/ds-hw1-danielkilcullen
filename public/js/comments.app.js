@@ -5,9 +5,9 @@ var commentsApp = new Vue({
         id: "",
         comment : ""
     },
-    commentArr = [],
-    commentForm = {}
-  }, /**js object**/
+    commentArr : [],
+    commentForm : {}
+  },
   methods: {
     fetchComments: function() {
       fetch('../api/comment.php')
