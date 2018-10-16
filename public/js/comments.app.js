@@ -5,8 +5,8 @@ var commentsApp = new Vue({
         id: "",
         comment : ""
     },
-    commentArr : [],
-    commentForm : {}
+    commentArr: [],
+    commentForm: {}
   },
   methods: {
     fetchComments: function() {
@@ -16,7 +16,7 @@ var commentsApp = new Vue({
         console.log('COMMENT FETCH returned: ');
         console.log(json);
       })
-      .then( json => {commentsApp.commentArr = json} )
+      .then( json => {this.commentArr = json} )
       .then(console.log(commentArr) //testing
       .catch( err => {
         console.log("COMMENT FETCH error: ");
