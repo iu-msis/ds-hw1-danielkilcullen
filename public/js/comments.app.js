@@ -1,5 +1,5 @@
-var HW7 = new Vue({
-  el: '#commentTableBody',
+var commentsApp = new Vue({
+  el: '#HW7',
   data: {
     comments: {
         id: "",
