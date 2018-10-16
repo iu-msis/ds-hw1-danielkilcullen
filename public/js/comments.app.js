@@ -3,8 +3,8 @@ var commentsApp = new Vue({
   data: {
     comments: [
       {
-        "id": "",
-        "comment" : ""
+        id: "",
+        comment : ""
       }
     ]
   }, /**js object**/
