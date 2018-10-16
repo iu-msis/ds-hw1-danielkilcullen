@@ -1,18 +1,14 @@
 var commentsApp = new Vue({
   el: '#commentTable',
   data: {
-    comments: {
-      id: '',
-      comment: ''
-    }
+    comments: { id: '', comment: '' }
   }, /**js object**/
   methods: {
-    fetchComments() {
-      fetch('../api/comment.php')
+    fetchComments: function() {
+      fetch('ec2-18-219-100-144.us-east-2.compute.amazonaws.com/api/comment.php')
       .then( response => response.json() )
+      .then( json => { commentsApp.comments = json } )
       .then( json => {
-        bioPage.comments.id = json.results[0].id;
-        bioPage.comments.comment = json.results[0].comment;
         console.log('COMMENT FETCH returned: ');
         console.log(json);
       })

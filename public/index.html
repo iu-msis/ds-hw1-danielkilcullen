@@ -46,10 +46,10 @@
 						</thead>
 						<tbody id="commentTableBody">
 							<tr v-for="comment in comments"
-								:key="comments.id"
-								:id="'comment-' + comments.id">
-								<td>{{ comments.id }}</td>
-								<td>{{ comments.text }}</td>
+								:key="comments.id">
+								<!-- :id="'comment-' + comments.id"> -->
+								<td>{{ comment.id }}</td>
+								<td>{{ comment.text }}</td>
 							</tr>
 						</tbody>
 					</table>
