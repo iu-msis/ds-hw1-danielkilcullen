@@ -38,7 +38,7 @@
 						<button class="btn-dark" v-on:click="fetchUser()">Random user</button>
 					</div>
 				</div>
-				<div class="col-6" id="HW7">
+				<div class="col-6 row" id="HW7">
 					<table class="table" id="commentTable">
 						<thead>
 							<th>Comment ID</th>
@@ -49,6 +49,13 @@
 							<td>{{ comment.comment }}</td>
 						</tbody>
 					</table>
+					<form @submit.prevent="" class="mx-auto" id="newCommentForm">
+						<div class="form-group text-center">
+							<label for="">Leave a comment!</label>
+							<textarea class="form-control" v-model="commentForm.comment" id="comment" type="text"></textarea>
+							<button type="submit" class="btn btn-dark" style="margin-top: 5px;">Submit!</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
