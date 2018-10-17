@@ -45,8 +45,8 @@
 							<th>Comment</th>
 						</thead>
 						<tbody v-for="comment in commentArr" id="commentTableBody">
-							<td>{{ comments.id }}</td>
-							<td>{{ comments.comment }}</td>
+							<td>{{ comment.id }}</td>
+							<td>{{ comment.comment }}</td>
 						</tbody>
 					</table>
 					<form @submit.prevent="handleCommentForm" class="mx-auto" id="newCommentForm">
