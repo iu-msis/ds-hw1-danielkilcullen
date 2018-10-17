@@ -20,7 +20,7 @@ var commentsApp = new Vue({
     },
     getEmptyCommentForm: function() {
       return {
-        // comment: '';
+        comment: '';
       }
     },
     handleCommentForm: function() {
