@@ -48,7 +48,6 @@ var commentsApp = new Vue({
 
       this.commentForm = this.getEmptyCommentForm();
     }
-    }
   },
   mounted() {
     this.fetchComments();
